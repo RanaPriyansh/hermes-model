@@ -15,6 +15,14 @@ a small specialized model. True sovereignty — own the intelligence stack.
 python3 collector.py
 ```
 
+## Validation
+```bash
+python3 -m unittest discover -s tests -p 'test_*.py' -v
+python3 collector.py
+```
+
+The unittest smoke test runs the collector against temporary sample logs/sessions so you can verify the pipeline without mutating the live corpus first.
+
 ## Nightly automation
 Add to cron: run collector before vault autocommit so training data
 compounds nightly alongside everything else.
